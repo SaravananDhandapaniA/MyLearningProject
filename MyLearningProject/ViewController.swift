@@ -7,16 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource ,CollectionTappedDelegate{
-    
- 
-    
 
-    @IBOutlet weak var tableView: UITableView!
+class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource ,CollectionTappedDelegate{
+
+
+  @IBOutlet weak var tableView: UITableView!
 
   var data = [companyData]()
     
-    var imageNames = ["Viswasam","Remo"]
+  var imageNames = ["Viswasam","Remo"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +117,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
     }
 
+
 }
+
 
 
 

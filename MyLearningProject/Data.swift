@@ -9,15 +9,15 @@ import Foundation
 
 struct companyData : Decodable{
     
-//    private enum CodingKeys: String , CodingKey{
-//        case id
-//        case name
-//        case currentSprint
-//        case startDate
-//        case endDate
-//        case issues
-//        case backlogs
-//        }
+    private enum CodingKeys: String , CodingKey{
+        case id
+        case name
+        case currentSprint
+        case startDate
+        case endDate
+        case issues
+        case backlogs
+        }
     
     
     let id : Int?

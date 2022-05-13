@@ -22,8 +22,7 @@ class tableCell3: UITableViewCell, UICollectionViewDelegate, UICollectionViewDat
     weak var delegate:CollectionTappedDelegate?
     
     let collectedImages = ["Remo","Viswasam","Jumanji","HarryPotter"]
-    
-    var data1 = [companyData]()
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,7 +41,6 @@ class tableCell3: UITableViewCell, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.collectionViewCellIdentifier, for: indexPath) as? CollectionViewCell
-       // cell?.nameLabel.text = data1[indexPath.row].name
         cell?.configure(collectedImages[indexPath.row])
         cell?.circleImage().self
         return cell!

@@ -213,7 +213,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HarryPotter" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-YY-9IX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S6j-YY-9IX">
                                 <rect key="frame" x="30" y="94" width="354" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="DI7-4j-fgp"/>
@@ -266,7 +266,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HarryPotter" width="1000" height="1500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
