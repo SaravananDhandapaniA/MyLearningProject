@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CollectionTappedDelegate: NSObjectProtocol{
-    func collectionImageTapped(_ image: String , _ name: String ,_ currSprint:String , _ startDate: String)
+    func collectionImageTapped(_ image: String , _ name: String? ,_ currSprint:String? , _ startDate: String?)
     
 }
 
@@ -49,7 +49,7 @@ class ThirdCellFromTable: UITableViewCell, UICollectionViewDelegate, UICollectio
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.delegate?.collectionImageTapped(imageArrayForCollectionView[indexPath.row],data[indexPath.row].name!,data[indexPath.row].currentSprint! , data[indexPath.row].startDate!)
+        self.delegate?.collectionImageTapped(imageArrayForCollectionView[indexPath.row],data[indexPath.row].name,data[indexPath.row].currentSprint, data[indexPath.row].startDate)
         
     }
  

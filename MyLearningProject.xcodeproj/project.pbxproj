@@ -118,7 +118,6 @@
 				5E119131282BA0BB007AB7F4 /* Assets.xcassets */,
 				5E119133282BA0BB007AB7F4 /* LaunchScreen.storyboard */,
 				5E119136282BA0BB007AB7F4 /* Info.plist */,
-				5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */,
 				5E11915C282BB3BE007AB7F4 /* Model.swift */,
 			);
 			path = MyLearningProject;
@@ -147,6 +146,7 @@
 				5E119158282BAF10007AB7F4 /* FirstCellFromTable.swift */,
 				5E119162282BC575007AB7F4 /* SecondCellFromTable.swift */,
 				5E119168282C2EE3007AB7F4 /* ThirdCellFromTable.swift */,
+				5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
