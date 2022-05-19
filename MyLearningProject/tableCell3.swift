@@ -6,18 +6,21 @@
 //
 
 import UIKit
+
 protocol CollectionTappedDelegate: NSObjectProtocol{
-    func collectionImageTapped(_ image: String )
+    func collectionImageTapped(_ image: String , _ name: String ,_ currSprint:String , _ startDate: String)
     
 }
 
-
-
 class tableCell3: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var data = [CompanyData]()
+ 
     
+
     
     weak var delegate:CollectionTappedDelegate?
     
@@ -35,20 +38,20 @@ class tableCell3: UITableViewCell, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return collectedImages.count
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.collectionViewCellIdentifier, for: indexPath) as? CollectionViewCell
+        cell?.nameLabel.text = data[indexPath.row].name
         cell?.configure(collectedImages[indexPath.row])
-        cell?.circleImage().self
         return cell!
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.delegate?.collectionImageTapped(collectedImages[indexPath.row])
+        self.delegate?.collectionImageTapped(collectedImages[indexPath.row],data[indexPath.row].name!,data[indexPath.row].currentSprint! , data[indexPath.row].startDate!)
         
     }
  

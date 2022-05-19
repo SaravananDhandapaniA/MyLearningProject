@@ -20,18 +20,20 @@ class tableCell2: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        img2.circleImage()
     }
    
-    func circleImage(){
-        img2.clipsToBounds = true
-        img2.layer.masksToBounds = true
-        img2.layer.cornerRadius = img2.frame.size.width / 2
-        img2.layer.cornerRadius = img2.frame.size.height / 2
-    }
+
     
-    func config(_ nameLabel: String , _ currentSprintLabel:String){
-        name2.text = nameLabel
-        currentSprint2.text = currentSprintLabel
+//    func config(_ nameLabel: String , _ currentSprintLabel:String){
+//        name2.text = nameLabel
+//        currentSprint2.text = currentSprintLabel
+//    }
+    
+    func config(_ data:CompanyData  , _ image:String){
+        name2.text = data.name
+        currentSprint2.text = data.currentSprint
+        img2.image = UIImage(named: image)
     }
 
 }

@@ -14,9 +14,9 @@
             filePath = "MyLearningProject/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "parse()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "networkParsing()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "MyLearningProject/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "parse()"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "networkParsing()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "MyLearningProject/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "parse()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "networkParsing()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -56,64 +56,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "145F13E5-9970-4953-9B0D-4D4FEDCB4775"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyLearningProject/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "34907DFF-AA7F-42F8-A6AA-BF4BCBD03C54"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyLearningProject/tableCell3.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "tableCell3"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "34907DFF-AA7F-42F8-A6AA-BF4BCBD03C54 - 76444a22c73093a3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyLearningProject.tableCell3.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; MyLearningProject.tableCell3"
-                  moduleName = "MyLearningProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "180">
-               </Location>
-               <Location
-                  uuid = "34907DFF-AA7F-42F8-A6AA-BF4BCBD03C54 - a3602708eccccbc2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyLearningProject.tableCell3.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MyLearningProject.tableCell3&gt;"
-                  moduleName = "MyLearningProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "137">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,8 +78,8 @@
             filePath = "MyLearningProject/tableCell3.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -236,6 +188,114 @@
                   startingLineNumber = "17"
                   endingLineNumber = "17"
                   offsetFromSymbolStart = "133">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42E4E586-AB9A-44B4-8647-0B6248C0D059"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyLearningProject/tableCell3.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "tableCell3"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "42E4E586-AB9A-44B4-8647-0B6248C0D059 - 93d56bb05c95c2d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLearningProject.tableCell3.data.getter : Swift.Array&lt;MyLearningProject.companyData&gt;"
+                  moduleName = "MyLearningProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "42E4E586-AB9A-44B4-8647-0B6248C0D059 - ed0e8f4e5a647ac2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLearningProject.tableCell3.data.setter : Swift.Array&lt;MyLearningProject.companyData&gt;"
+                  moduleName = "MyLearningProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "42E4E586-AB9A-44B4-8647-0B6248C0D059 - 8a2657d071e55cd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLearningProject.tableCell3.data.modify : Swift.Array&lt;MyLearningProject.companyData&gt;"
+                  moduleName = "MyLearningProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "42E4E586-AB9A-44B4-8647-0B6248C0D059 - 216458507a535edd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLearningProject.tableCell3.data.modify : Swift.Array&lt;MyLearningProject.companyData&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MyLearningProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "42E4E586-AB9A-44B4-8647-0B6248C0D059 - 76444a22c73093fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLearningProject.tableCell3.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; MyLearningProject.tableCell3"
+                  moduleName = "MyLearningProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "42E4E586-AB9A-44B4-8647-0B6248C0D059 - a3602708eccccb9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLearningProject.tableCell3.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MyLearningProject.tableCell3&gt;"
+                  moduleName = "MyLearningProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tringapps/Desktop/MyLearningProject/MyLearningProject/tableCell3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "137">
                </Location>
             </Locations>
          </BreakpointContent>

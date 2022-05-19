@@ -15,22 +15,32 @@ class tableCell1: UITableViewCell {
     
     @IBOutlet weak var currentSprint: UILabel!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        img.circleImage()
+        
     }
     
 
+    
+    
+    func config(_ data: CompanyData, _ image : String){
+        name.text = data.name
+        currentSprint.text = data.currentSprint
+        img.image = UIImage(named: image)
+    }
+
+}
+
+extension UIImageView {
+    
     func circleImage(){
-        img.clipsToBounds = true
-        img.layer.masksToBounds = true
-        img.layer.cornerRadius = img.frame.size.width / 2
-        img.layer.cornerRadius = img.frame.size.height / 2
-    }
-    
-    func config(_ nameLabel: String , _ currentSprintLabel:String){
-        name.text = nameLabel
-        currentSprint.text = currentSprintLabel
-    }
-
+        self.clipsToBounds = true
+        self.layer.masksToBounds = true
+       self.layer.cornerRadius = self.frame.size.width / 2
+       self.layer.cornerRadius = self.frame.size.height / 2
+   }
 }

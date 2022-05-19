@@ -37,5 +37,11 @@ class SecondViewController: UIViewController {
         secondVcImageView.layer.cornerRadius = secondVcImageView.frame.size.height / 2
     }
 
+//    func config(_ data:companyData,_ image :String){
+//        secondVcImageView.image = UIImage(named: image)
+//        secondVcName.text = data.name
+//        secondVcCurrentSprint.text = data.currentSprint
+//        secondVcStartDate.text = data.startDate
+//    }
 
 }

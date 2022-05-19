@@ -17,7 +17,7 @@
 		5E11914A282BA0BC007AB7F4 /* MyLearningProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119149282BA0BC007AB7F4 /* MyLearningProjectUITests.swift */; };
 		5E11914C282BA0BC007AB7F4 /* MyLearningProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11914B282BA0BC007AB7F4 /* MyLearningProjectUITestsLaunchTests.swift */; };
 		5E119159282BAF10007AB7F4 /* tableCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119158282BAF10007AB7F4 /* tableCell1.swift */; };
-		5E11915D282BB3BE007AB7F4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11915C282BB3BE007AB7F4 /* Data.swift */; };
+		5E11915D282BB3BE007AB7F4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11915C282BB3BE007AB7F4 /* Model.swift */; };
 		5E119163282BC575007AB7F4 /* tableCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119162282BC575007AB7F4 /* tableCell2.swift */; };
 		5E119165282BCFBF007AB7F4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */; };
 		5E119167282C1B3B007AB7F4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119166282C1B3B007AB7F4 /* SecondViewController.swift */; };
@@ -57,7 +57,7 @@
 		5E119149282BA0BC007AB7F4 /* MyLearningProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLearningProjectUITests.swift; sourceTree = "<group>"; };
 		5E11914B282BA0BC007AB7F4 /* MyLearningProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLearningProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5E119158282BAF10007AB7F4 /* tableCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableCell1.swift; sourceTree = "<group>"; };
-		5E11915C282BB3BE007AB7F4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		5E11915C282BB3BE007AB7F4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5E119162282BC575007AB7F4 /* tableCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableCell2.swift; sourceTree = "<group>"; };
 		5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		5E119166282C1B3B007AB7F4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +116,7 @@
 				5E119128282BA0B9007AB7F4 /* AppDelegate.swift */,
 				5E11912A282BA0B9007AB7F4 /* SceneDelegate.swift */,
 				5E11912C282BA0B9007AB7F4 /* ViewController.swift */,
+				5E119166282C1B3B007AB7F4 /* SecondViewController.swift */,
 				5E11912E282BA0B9007AB7F4 /* Main.storyboard */,
 				5E119131282BA0BB007AB7F4 /* Assets.xcassets */,
 				5E119133282BA0BB007AB7F4 /* LaunchScreen.storyboard */,
@@ -124,8 +125,7 @@
 				5E119162282BC575007AB7F4 /* tableCell2.swift */,
 				5E119168282C2EE3007AB7F4 /* tableCell3.swift */,
 				5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */,
-				5E11915C282BB3BE007AB7F4 /* Data.swift */,
-				5E119166282C1B3B007AB7F4 /* SecondViewController.swift */,
+				5E11915C282BB3BE007AB7F4 /* Model.swift */,
 				5E11916A282D6DFA007AB7F4 /* Constant.swift */,
 			);
 			path = MyLearningProject;
@@ -280,7 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E119159282BAF10007AB7F4 /* tableCell1.swift in Sources */,
-				5E11915D282BB3BE007AB7F4 /* Data.swift in Sources */,
+				5E11915D282BB3BE007AB7F4 /* Model.swift in Sources */,
 				5E119165282BCFBF007AB7F4 /* CollectionViewCell.swift in Sources */,
 				5E11912D282BA0B9007AB7F4 /* ViewController.swift in Sources */,
 				5E119169282C2EE3007AB7F4 /* tableCell3.swift in Sources */,

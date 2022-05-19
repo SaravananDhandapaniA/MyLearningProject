@@ -13,9 +13,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
 
   @IBOutlet weak var tableView: UITableView!
 
-  var data = [companyData]()
+  var data = [CompanyData]()
     
-  var imageNames = ["Viswasam","Remo"]
+  var imageArrayForTableView = ["Viswasam","Remo"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,12 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         tableView.dataSource = self
         tableView.rowHeight = 150
 
-        parse()
+        networkParsing()
 
     }
 
 
-    func parse(){
+    func networkParsing(){
 
         let urlString = "http://th-alb-1338985061.ap-south-1.elb.amazonaws.com/api/v1/projects/sprints"
 
@@ -40,15 +40,13 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
                 print(error)
                 return
             }
-
             guard let data = data else {
                 return
             }
-
             do{
-               let jsonData = try JSONDecoder().decode([companyData].self, from: data)
+               let jsonData = try JSONDecoder().decode([CompanyData].self, from: data)
                 self.data = jsonData
-                print("name : \(jsonData)")
+               // print("name : \(jsonData)")
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -70,30 +68,24 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
   
         if indexPath.row == 0
         {
-             let cell = tableView.dequeueReusableCell(withIdentifier: Constant.firstCellIdentifier , for: indexPath) as? tableCell1
-
-            cell?.config(data[indexPath.row].name!, data[indexPath.row].currentSprint!)
-//            cell?.name.text = data[indexPath.row].name
-//            cell?.currentSprint.text = data[indexPath.row].currentSprint
-            cell?.img.image = UIImage(named: imageNames[indexPath.row])
-            cell?.circleImage().self
-            return cell!
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.firstCellIdentifier , for: indexPath) as? tableCell1 else {return UITableViewCell()}
+            cell.config(data[indexPath.row], imageArrayForTableView[indexPath.row])
+            return cell
         }
         else if indexPath.row == 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.secondCellIdentifier, for: indexPath) as? tableCell2
-            cell?.config(data[indexPath.row].name!, data[indexPath.row].currentSprint!)
-//            cell?.name2.text = data[indexPath.row].name
-//            cell?.currentSprint2.text = data[indexPath.row].currentSprint
-            cell?.img2.image = UIImage(named: imageNames[indexPath.row])
-            cell?.circleImage().self
-           return cell!
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.secondCellIdentifier, for: indexPath) as? tableCell2 else{return UITableViewCell()}
+           // cell.config(data[indexPath.row].name!, data[indexPath.row].currentSprint!)
+            cell.config(data[indexPath.row], imageArrayForTableView[indexPath.row])
+            //cell.img2.image = UIImage(named: imageNames[indexPath.row])
+           return cell
         }
         else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constant.thirdCellIdentifier, for: indexPath) as? tableCell3
-            cell?.delegate = self
-           return cell!
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.thirdCellIdentifier, for: indexPath) as? tableCell3 else {return UITableViewCell()}
+            cell.data = self.data
+            cell.delegate = self
+           return cell
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -102,17 +94,20 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             return
         }
         
-        vc.image = UIImage(named: imageNames[indexPath.row])!
+        vc.image = UIImage(named: imageArrayForTableView[indexPath.row])!
         vc.name = data[indexPath.row].name!
         vc.currentSprint = data[indexPath.row].currentSprint!
         vc.startDate = data[indexPath.row].startDate!
         self.present(vc, animated: true, completion: nil)
     }
     
-    func collectionImageTapped(_ image: String ) {
+    func collectionImageTapped(_ image: String ,_ name:String , _ currSprint:String , _ startDate:String) {
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: Constant.secondViewControllerIdentifier) as? SecondViewController else{return}
         vc.image = UIImage(named: image)!
+        vc.name = name
+        vc.currentSprint = currSprint
+        vc.startDate = startDate
         self.present(vc, animated: true, completion: nil)
         
     }

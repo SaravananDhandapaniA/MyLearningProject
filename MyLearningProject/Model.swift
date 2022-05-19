@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct companyData : Decodable{
+struct CompanyData : Decodable{
     
     private enum CodingKeys: String , CodingKey{
-        case id
+        case id 
         case name
         case currentSprint
         case startDate
