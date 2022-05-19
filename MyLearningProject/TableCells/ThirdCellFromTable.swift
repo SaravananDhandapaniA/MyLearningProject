@@ -12,29 +12,28 @@ protocol CollectionTappedDelegate: NSObjectProtocol{
     
 }
 
-class tableCell3: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
+
+class ThirdCellFromTable: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var data = [CompanyData]()
- 
+    static let thirdCellIdentifier = "thirdCellIdentifier"
     
-
+    var data = [CompanyData]()
     
     weak var delegate:CollectionTappedDelegate?
     
-    let collectedImages = ["Remo","Viswasam","Jumanji","HarryPotter"]
+    let imageArrayForCollectionView = ["Remo","Viswasam","Jumanji","HarryPotter"]
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
     }
-
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
@@ -43,15 +42,14 @@ class tableCell3: UITableViewCell, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.collectionViewCellIdentifier, for: indexPath) as? CollectionViewCell
-        cell?.nameLabel.text = data[indexPath.row].name
-        cell?.configure(collectedImages[indexPath.row])
-        return cell!
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.collectionViewCellIdentifier, for: indexPath) as? CollectionViewCell else {return UICollectionViewCell()}
+        cell.configForCollectionViewCell(imageArrayForCollectionView[indexPath.row], data[indexPath.row])
+        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.delegate?.collectionImageTapped(collectedImages[indexPath.row],data[indexPath.row].name!,data[indexPath.row].currentSprint! , data[indexPath.row].startDate!)
+        self.delegate?.collectionImageTapped(imageArrayForCollectionView[indexPath.row],data[indexPath.row].name!,data[indexPath.row].currentSprint! , data[indexPath.row].startDate!)
         
     }
  

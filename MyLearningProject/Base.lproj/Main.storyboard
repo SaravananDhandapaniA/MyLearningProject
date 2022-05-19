@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MyLearningProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="150" id="6RH-h4-J1C" customClass="tableCell1" customModule="MyLearningProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstCellIdentifier" rowHeight="150" id="6RH-h4-J1C" customClass="FirstCellFromTable" customModule="MyLearningProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6RH-h4-J1C" id="2Xi-PJ-x15">
@@ -37,7 +37,6 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C0K-gO-Y0l">
                                                     <rect key="frame" x="274" y="20" width="120" height="110"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="G4F-F1-203"/>
                                                         <constraint firstAttribute="width" constant="120" id="NKb-Ce-xgz"/>
                                                     </constraints>
                                                 </imageView>
@@ -63,13 +62,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.64515213251148462" green="0.93936954515077153" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <outlet property="currentSprint" destination="gbx-a4-zhU" id="yJv-05-NqK"/>
-                                            <outlet property="imageView" destination="C0K-gO-Y0l" id="J5W-TU-gvv"/>
-                                            <outlet property="img" destination="C0K-gO-Y0l" id="hfB-QN-ASS"/>
-                                            <outlet property="name" destination="1fg-Mv-nNK" id="Zbm-lk-rzB"/>
+                                            <outlet property="firstCellCurrentSprintLabel" destination="gbx-a4-zhU" id="lRC-Jw-i0H"/>
+                                            <outlet property="firstCellImageView" destination="C0K-gO-Y0l" id="uIv-Bz-LZG"/>
+                                            <outlet property="firstCellNameLabel" destination="1fg-Mv-nNK" id="1BO-SC-HT7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="150" id="0ch-ep-040" customClass="tableCell2" customModule="MyLearningProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCellIdentifier" rowHeight="150" id="0ch-ep-040" customClass="SecondCellFromTable" customModule="MyLearningProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="194.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ch-ep-040" id="WiY-fZ-HX9">
@@ -85,7 +83,6 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMu-OK-PXO">
                                                     <rect key="frame" x="20" y="20" width="120" height="110"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="6LD-L5-lO2"/>
                                                         <constraint firstAttribute="width" constant="120" id="tOc-G3-GdX"/>
                                                     </constraints>
                                                 </imageView>
@@ -111,30 +108,30 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <connections>
-                                            <outlet property="currentSprint2" destination="kxq-VY-I3x" id="1Su-kd-jdd"/>
-                                            <outlet property="img2" destination="DMu-OK-PXO" id="opR-HK-yii"/>
-                                            <outlet property="name2" destination="Seb-fe-C5q" id="Pk0-o9-boc"/>
+                                            <outlet property="secondCellCurrentSprintLabel" destination="kxq-VY-I3x" id="3uJ-zj-4dZ"/>
+                                            <outlet property="secondCellImageView" destination="DMu-OK-PXO" id="hu6-cB-FJE"/>
+                                            <outlet property="secondCellNameLabel" destination="Seb-fe-C5q" id="oek-i3-ckW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" rowHeight="160" id="bfO-Mz-m68" customClass="tableCell3" customModule="MyLearningProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="344.5" width="414" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thirdCellIdentifier" rowHeight="150" id="bfO-Mz-m68" customClass="ThirdCellFromTable" customModule="MyLearningProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="344.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfO-Mz-m68" id="4Q5-pd-7dy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-r7-vVi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                     <color key="backgroundColor" red="0.64515213250000003" green="0.93936954520000004" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gcl-FF-TYs">
-                                                        <size key="itemSize" width="192" height="149"/>
+                                                        <size key="itemSize" width="192" height="150"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="LsK-bY-3Rg" customClass="CollectionViewCell" customModule="MyLearningProject" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="5.5" width="192" height="149"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellIdentifier" id="LsK-bY-3Rg" customClass="CollectionViewCell" customModule="MyLearningProject" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.5" width="192" height="149"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NnU-Wa-6Ey">
                                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="149"/>
@@ -147,7 +144,7 @@
                                                                             <constraint firstAttribute="height" constant="100" id="kW8-g5-TBa"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfX-Ib-TM9">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfX-Ib-TM9">
                                                                         <rect key="frame" x="0.0" y="104" width="192" height="45"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -166,8 +163,8 @@
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="192" height="149"/>
                                                             <connections>
-                                                                <outlet property="imageView1" destination="wGv-yU-XvV" id="b3V-c1-oWf"/>
-                                                                <outlet property="nameLabel" destination="DfX-Ib-TM9" id="LPc-2S-oFp"/>
+                                                                <outlet property="collectionViewImage" destination="wGv-yU-XvV" id="qcM-dH-oR0"/>
+                                                                <outlet property="collectionViewNameLabel" destination="DfX-Ib-TM9" id="duA-Ky-kwD"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -205,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="82.366071428571431"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Action View Controller-->
         <scene sceneID="ulp-l0-z1f">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="Kse-tV-Ntu" customClass="SecondViewController" customModule="MyLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActionViewController" id="Kse-tV-Ntu" customClass="ActionViewController" customModule="MyLearningProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y67-xA-JHY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,6 +250,7 @@
                             <constraint firstItem="p8r-02-QJ4" firstAttribute="top" secondItem="S6j-YY-9IX" secondAttribute="bottom" constant="60" id="zjZ-lD-OhH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Mfa-3R-hMX"/>
                     <connections>
                         <outlet property="secondVcCurrentSprint" destination="hFU-n7-maz" id="vbg-wW-zh4"/>
                         <outlet property="secondVcImageView" destination="S6j-YY-9IX" id="ACp-1L-R0F"/>

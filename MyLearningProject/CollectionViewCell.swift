@@ -10,26 +10,25 @@ import UIKit
 
 
 class CollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var collectionViewImage: UIImageView!
     
+    @IBOutlet weak var collectionViewNameLabel: UILabel!
     
-    @IBOutlet weak var imageView1: UIImageView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    // weak var delegate:CollectionTappedDelegate?
+    static let collectionViewCellIdentifier = "collectionViewCellIdentifier"
     
     override class func awakeFromNib() {
         super.awakeFromNib()
         
     }
    
-    func configure(_ image : String )
+    func configForCollectionViewCell(_ image : String , _ data : CompanyData)
    {
-       imageView1.image = UIImage(named: image)
-       imageView1.circleImage()
+       collectionViewImage.image = UIImage(named: image)
+       collectionViewNameLabel.text = data.name
+       collectionViewImage.circleImage()
 
    }
     
-    
-    
-    
+
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource ,CollectionTappedDelegate{
+class MainViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource ,CollectionTappedDelegate{
 
 
   @IBOutlet weak var tableView: UITableView!
@@ -22,7 +22,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 150
+        tableView.rowHeight = 160
 
         networkParsing()
 
@@ -46,7 +46,6 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             do{
                let jsonData = try JSONDecoder().decode([CompanyData].self, from: data)
                 self.data = jsonData
-               // print("name : \(jsonData)")
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -68,20 +67,18 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
   
         if indexPath.row == 0
         {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.firstCellIdentifier , for: indexPath) as? tableCell1 else {return UITableViewCell()}
-            cell.config(data[indexPath.row], imageArrayForTableView[indexPath.row])
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FirstCellFromTable.firstCellIdentifier , for: indexPath) as? FirstCellFromTable else {return UITableViewCell()}
+            cell.configForFirstCell(data[indexPath.row], imageArrayForTableView[indexPath.row])
             return cell
         }
         else if indexPath.row == 1{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.secondCellIdentifier, for: indexPath) as? tableCell2 else{return UITableViewCell()}
-           // cell.config(data[indexPath.row].name!, data[indexPath.row].currentSprint!)
-            cell.config(data[indexPath.row], imageArrayForTableView[indexPath.row])
-            //cell.img2.image = UIImage(named: imageNames[indexPath.row])
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SecondCellFromTable.secondCellIdentifier, for: indexPath) as? SecondCellFromTable else{return UITableViewCell()}
+            cell.configForSecondCell(data[indexPath.row], imageArrayForTableView[indexPath.row])
            return cell
         }
         else{
             
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constant.thirdCellIdentifier, for: indexPath) as? tableCell3 else {return UITableViewCell()}
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ThirdCellFromTable.thirdCellIdentifier, for: indexPath) as? ThirdCellFromTable else {return UITableViewCell()}
             cell.data = self.data
             cell.delegate = self
            return cell
@@ -90,25 +87,24 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: Constant.secondViewControllerIdentifier) as? SecondViewController else{
+        guard let actionVC = storyboard?.instantiateViewController(withIdentifier: ActionViewController.actionViewControllerIdentifier) as? ActionViewController else{
             return
         }
-        
-        vc.image = UIImage(named: imageArrayForTableView[indexPath.row])!
-        vc.name = data[indexPath.row].name!
-        vc.currentSprint = data[indexPath.row].currentSprint!
-        vc.startDate = data[indexPath.row].startDate!
-        self.present(vc, animated: true, completion: nil)
+        actionVC.image = UIImage(named: imageArrayForTableView[indexPath.row])
+        actionVC.name = data[indexPath.row].name
+        actionVC.currentSprint = data[indexPath.row].currentSprint
+        actionVC.startDate = data[indexPath.row].startDate
+        self.present(actionVC, animated: true, completion: nil)
     }
     
     func collectionImageTapped(_ image: String ,_ name:String , _ currSprint:String , _ startDate:String) {
         
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: Constant.secondViewControllerIdentifier) as? SecondViewController else{return}
-        vc.image = UIImage(named: image)!
-        vc.name = name
-        vc.currentSprint = currSprint
-        vc.startDate = startDate
-        self.present(vc, animated: true, completion: nil)
+        guard let actionVC = storyboard?.instantiateViewController(withIdentifier: ActionViewController.actionViewControllerIdentifier) as? ActionViewController else{return}
+        actionVC.image = UIImage(named: image)
+        actionVC.name = name
+        actionVC.currentSprint = currSprint
+        actionVC.startDate = startDate
+        self.present(actionVC, animated: true, completion: nil)
         
     }
 
