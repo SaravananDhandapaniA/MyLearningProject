@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E00D38B2837B0F500F91EDE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00D38A2837B0F500F91EDE /* SettingsViewController.swift */; };
+		5E00D38D2837B16B00F91EDE /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00D38C2837B16B00F91EDE /* SampleViewController.swift */; };
+		5E00D38F2837DB1D00F91EDE /* SettingsProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00D38E2837DB1D00F91EDE /* SettingsProfile.swift */; };
 		5E119129282BA0B9007AB7F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119128282BA0B9007AB7F4 /* AppDelegate.swift */; };
 		5E11912B282BA0B9007AB7F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11912A282BA0B9007AB7F4 /* SceneDelegate.swift */; };
 		5E11912D282BA0B9007AB7F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E11912C282BA0B9007AB7F4 /* MainViewController.swift */; };
@@ -22,6 +25,7 @@
 		5E119165282BCFBF007AB7F4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */; };
 		5E119167282C1B3B007AB7F4 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119166282C1B3B007AB7F4 /* ActionViewController.swift */; };
 		5E119169282C2EE3007AB7F4 /* ThirdCellFromTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E119168282C2EE3007AB7F4 /* ThirdCellFromTable.swift */; };
+		5E771D832838BD32009F7090 /* SettingsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E771D822838BD32009F7090 /* SettingsItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E00D38A2837B0F500F91EDE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5E00D38C2837B16B00F91EDE /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		5E00D38E2837DB1D00F91EDE /* SettingsProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfile.swift; sourceTree = "<group>"; };
 		5E119125282BA0B9007AB7F4 /* MyLearningProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLearningProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E119128282BA0B9007AB7F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E11912A282BA0B9007AB7F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +68,7 @@
 		5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		5E119166282C1B3B007AB7F4 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		5E119168282C2EE3007AB7F4 /* ThirdCellFromTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdCellFromTable.swift; sourceTree = "<group>"; };
+		5E771D822838BD32009F7090 /* SettingsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,8 @@
 				5E119162282BC575007AB7F4 /* SecondCellFromTable.swift */,
 				5E119168282C2EE3007AB7F4 /* ThirdCellFromTable.swift */,
 				5E119164282BCFBF007AB7F4 /* CollectionViewCell.swift */,
+				5E00D38E2837DB1D00F91EDE /* SettingsProfile.swift */,
+				5E771D822838BD32009F7090 /* SettingsItems.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -156,6 +166,8 @@
 			children = (
 				5E11912C282BA0B9007AB7F4 /* MainViewController.swift */,
 				5E119166282C1B3B007AB7F4 /* ActionViewController.swift */,
+				5E00D38A2837B0F500F91EDE /* SettingsViewController.swift */,
+				5E00D38C2837B16B00F91EDE /* SampleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E11914F282BA0BC007AB7F4 /* Build configuration list for PBXNativeTarget "MyLearningProject" */;
 			buildPhases = (
+				5E53BB9B2837933700A577C2 /* Run SwiftLint */,
 				5E119121282BA0B9007AB7F4 /* Sources */,
 				5E119122282BA0B9007AB7F4 /* Frameworks */,
 				5E119123282BA0B9007AB7F4 /* Resources */,
@@ -295,15 +308,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E53BB9B2837933700A577C2 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5E119121282BA0B9007AB7F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E00D38D2837B16B00F91EDE /* SampleViewController.swift in Sources */,
 				5E119159282BAF10007AB7F4 /* FirstCellFromTable.swift in Sources */,
+				5E00D38F2837DB1D00F91EDE /* SettingsProfile.swift in Sources */,
 				5E11915D282BB3BE007AB7F4 /* Model.swift in Sources */,
 				5E119165282BCFBF007AB7F4 /* CollectionViewCell.swift in Sources */,
+				5E00D38B2837B0F500F91EDE /* SettingsViewController.swift in Sources */,
 				5E11912D282BA0B9007AB7F4 /* MainViewController.swift in Sources */,
+				5E771D832838BD32009F7090 /* SettingsItems.swift in Sources */,
 				5E119169282C2EE3007AB7F4 /* ThirdCellFromTable.swift in Sources */,
 				5E119129282BA0B9007AB7F4 /* AppDelegate.swift in Sources */,
 				5E119163282BC575007AB7F4 /* SecondCellFromTable.swift in Sources */,

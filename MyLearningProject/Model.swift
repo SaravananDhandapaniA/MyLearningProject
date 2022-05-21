@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct CompanyData : Decodable{
-    
-    private enum CodingKeys: String , CodingKey{
-        case id 
+struct CompanyData: Decodable {
+    private enum CodingKeys: String, CodingKey {
+        case id
         case name
         case currentSprint
         case startDate
@@ -18,45 +17,11 @@ struct CompanyData : Decodable{
         case issues
         case backlogs
         }
-    
-    
-    let id : Int?
-    let name : String?
-    let currentSprint : String?
-    let startDate :  String?
-    let endDate : String?
-    let issues : Int?
-    let backlogs : Int?
+    let id: Int?
+    let name: String?
+    let currentSprint: String?
+    let startDate: String?
+    let endDate: String?
+    let issues: Int?
+    let backlogs: Int?
 }
-
-//struct CompanyData : Decodable{
-//
-//    private enum CodingKeys: String , CodingKey{
-//        case companyData
-//    }
-//
-//    let companyData : [Data]
-//}
-//
-//
-//struct Data : Decodable{
-//
-//    private enum CodingKeys: String , CodingKey{
-//        case id
-//        case name
-//        case currentSprint
-//        case startDate
-//        case endDate
-//        case issues
-//        case backlogs
-//    }
-//
-//    let id : Int?
-//    let name : String?
-//    let currentSprint : String?
-//    let startDate :  String?
-//    let endDate : String?
-//    let issues : Int?
-//    let backlogs : Int?
-//}
-

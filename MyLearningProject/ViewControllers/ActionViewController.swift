@@ -8,23 +8,17 @@
 import UIKit
 
 class ActionViewController: UIViewController {
-    
     @IBOutlet weak var secondVcImageView: UIImageView!
-    
     @IBOutlet weak var secondVcName: UILabel!
-    
     @IBOutlet weak var secondVcCurrentSprint: UILabel!
-        
     @IBOutlet weak var secondVcStartDate: UILabel!
-    
     static let actionViewControllerIdentifier = "ActionViewController"
-    
-    
-    var image : UIImage?
-    var name : String?
-    var currentSprint : String?
-    var startDate : String?
-    
+
+    var image: UIImage?
+    var name: String?
+    var currentSprint: String?
+    var startDate: String?
+    var userData: CompanyData?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +29,4 @@ class ActionViewController: UIViewController {
 
         secondVcImageView.circleImage()
     }
-
-
 }

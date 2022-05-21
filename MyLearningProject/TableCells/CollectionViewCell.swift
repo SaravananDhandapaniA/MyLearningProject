@@ -7,28 +7,18 @@
 
 import UIKit
 
-
-
 class CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var collectionViewImage: UIImageView!
-    
     @IBOutlet weak var collectionViewNameLabel: UILabel!
-    
-    static let collectionViewCellIdentifier = "collectionViewCellIdentifier"
-    
+    static let collectionIdentifier = "collectionViewCellIdentifier"
     override class func awakeFromNib() {
         super.awakeFromNib()
-        
     }
-   
-    func configForCollectionViewCell(_ image : String , _ data : CompanyData)
-   {
+    func configForCollectionViewCell(_ image: String, _ data: CompanyData) {
        collectionViewImage.image = UIImage(named: image)
        collectionViewNameLabel.text = data.name
        collectionViewImage.circleImage()
 
    }
-    
-
 }
