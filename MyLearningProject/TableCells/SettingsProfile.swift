@@ -16,4 +16,9 @@ class SettingsProfile: UITableViewCell {
         // Initialization code
         settingsProfileImage.circleImage()
     }
+    func configForProfile(_ image: String) {
+        settingsProfileImage.image = UIImage(named: image)
+        settingsProfileSignInLabel.text = "Sign in to your iPhone"
+        settingsProfileSetupLabel.text = "Set up iCoud, the AppStrore and more"
+    }
 }

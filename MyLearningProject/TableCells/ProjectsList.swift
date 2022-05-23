@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol CollectionTappedDelegate: NSObjectProtocol {
-    func collectionImageTapped(_ image: String, _ name: String?, _ currSprint: String?, _ startDate: String?)
+protocol CollectionViewDataDelegate: NSObjectProtocol {
+    func collectionItemsTapped(_ image: String, _ data: CompanyData)
 }
 
-class ThirdCellFromTable: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class ProjectsList: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
-    static let thirdCellIdentifier = "thirdCellIdentifier"
+    static let projectsListIdentifier = "projectsListIdentifier"
     var data = [CompanyData]()
-    weak var delegate: CollectionTappedDelegate?
-    let imageArrayForCollectionView = ["Remo", "Viswasam", "Jumanji", "HarryPotter"]
+    weak var delegate: CollectionViewDataDelegate?
+    let imageArrayForCollectionView = ["Image1", "Image2", "Image3", "Image4"]
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,8 +36,6 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    self.delegate?.collectionImageTapped(
-        imageArrayForCollectionView[indexPath.row],
-        data[indexPath.row].name, data[indexPath.row].currentSprint, data[indexPath.row].startDate)
+    self.delegate?.collectionItemsTapped(imageArrayForCollectionView[indexPath.row], data[indexPath.row])
     }
 }

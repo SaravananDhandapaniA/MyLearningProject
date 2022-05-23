@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstCellIdentifier" rowHeight="150" id="6RH-h4-J1C" customClass="FirstCellFromTable" customModule="MyLearningProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="project1Identifer" rowHeight="150" id="6RH-h4-J1C" customClass="CompanyProject1" customModule="MyLearningProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6RH-h4-J1C" id="2Xi-PJ-x15">
@@ -62,12 +62,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.64515213251148462" green="0.93936954515077153" blue="0.96611279250000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <outlet property="firstCellCurrentSprintLabel" destination="gbx-a4-zhU" id="lRC-Jw-i0H"/>
-                                            <outlet property="firstCellImageView" destination="C0K-gO-Y0l" id="uIv-Bz-LZG"/>
-                                            <outlet property="firstCellNameLabel" destination="1fg-Mv-nNK" id="1BO-SC-HT7"/>
+                                            <outlet property="project1CurrentSprintLabel" destination="gbx-a4-zhU" id="YlI-Ox-Kcb"/>
+                                            <outlet property="project1Image" destination="C0K-gO-Y0l" id="oh3-gu-gvb"/>
+                                            <outlet property="project1NameLabel" destination="1fg-Mv-nNK" id="GOu-jw-CcT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCellIdentifier" rowHeight="150" id="0ch-ep-040" customClass="SecondCellFromTable" customModule="MyLearningProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="project2Identifier" rowHeight="150" id="0ch-ep-040" customClass="CompanyProject2" customModule="MyLearningProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="194.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ch-ep-040" id="WiY-fZ-HX9">
@@ -108,12 +108,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <connections>
-                                            <outlet property="secondCellCurrentSprintLabel" destination="kxq-VY-I3x" id="3uJ-zj-4dZ"/>
-                                            <outlet property="secondCellImageView" destination="DMu-OK-PXO" id="hu6-cB-FJE"/>
-                                            <outlet property="secondCellNameLabel" destination="Seb-fe-C5q" id="oek-i3-ckW"/>
+                                            <outlet property="project2CurrentSprintLabel" destination="kxq-VY-I3x" id="Av2-Gl-09s"/>
+                                            <outlet property="project2ImageView" destination="DMu-OK-PXO" id="bFc-Uk-HQj"/>
+                                            <outlet property="project2NameLabel" destination="Seb-fe-C5q" id="eYC-8N-1hE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thirdCellIdentifier" rowHeight="150" id="bfO-Mz-m68" customClass="ThirdCellFromTable" customModule="MyLearningProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectsListIdentifier" rowHeight="150" id="bfO-Mz-m68" customClass="ProjectsList" customModule="MyLearningProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="344.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfO-Mz-m68" id="4Q5-pd-7dy">
@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="-145" y="866"/>
         </scene>
-        <!--Action View Controller-->
+        <!--Present Details View Controller-->
         <scene sceneID="ulp-l0-z1f">
             <objects>
-                <viewController storyboardIdentifier="ActionViewController" id="Kse-tV-Ntu" customClass="ActionViewController" customModule="MyLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PresentDetailsViewController" id="Kse-tV-Ntu" customClass="PresentDetailsViewController" customModule="MyLearningProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y67-xA-JHY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,10 +259,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mfa-3R-hMX"/>
                     <connections>
-                        <outlet property="secondVcCurrentSprint" destination="hFU-n7-maz" id="vbg-wW-zh4"/>
-                        <outlet property="secondVcImageView" destination="S6j-YY-9IX" id="ACp-1L-R0F"/>
-                        <outlet property="secondVcName" destination="p8r-02-QJ4" id="jhY-AA-Mnz"/>
-                        <outlet property="secondVcStartDate" destination="ER5-gF-Zvr" id="0iQ-je-mhV"/>
+                        <outlet property="presentedCurrentSprintLabel" destination="hFU-n7-maz" id="EyW-Gv-FLN"/>
+                        <outlet property="presentedImage" destination="S6j-YY-9IX" id="4Zr-xc-dnV"/>
+                        <outlet property="presentedNameLabel" destination="p8r-02-QJ4" id="UhS-h7-2ke"/>
+                        <outlet property="presentedStartDate" destination="ER5-gF-Zvr" id="4hV-CP-dz6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kW-Jf-OtV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -347,13 +347,13 @@
                                                         <constraint firstAttribute="width" constant="100" id="ee6-s7-d7c"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to your iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25q-2a-2Wv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25q-2a-2Wv">
                                                     <rect key="frame" x="130" y="30" width="244" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" systemColor="systemCyanColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set up icCoud, the AppStrore and more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-ao-crY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-ao-crY">
                                                     <rect key="frame" x="130" y="61.5" width="254" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

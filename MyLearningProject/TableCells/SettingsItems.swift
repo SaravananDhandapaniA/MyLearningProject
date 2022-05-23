@@ -14,4 +14,8 @@ class SettingsItems: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    func configForAllItems(_ imageName: String) {
+        settingsItemImage.image = UIImage(named: imageName)
+        settingsItemLabel.text = imageName
+    }
 }

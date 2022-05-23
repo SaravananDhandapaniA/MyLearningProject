@@ -7,85 +7,60 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CollectionTappedDelegate {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CollectionViewDataDelegate {
 
   @IBOutlet weak var tableView: UITableView!
 
-  var data = [CompanyData]()
-  var imageArrayForTableView = ["Viswasam", "Remo"]
+  // var data = [CompanyData]()
+    var viewModel = ComapanyDataViewModel()
+  var imageArrayForTableView = ["Image1", "Image2"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 160
-
-        networkParsing()
+        loadCompanyData()
     }
-
-    func networkParsing() {
-
-        let urlString = "http://th-alb-1338985061.ap-south-1.elb.amazonaws.com/api/v1/projects/sprints"
-
-        guard let url = URL(string: urlString) else {return}
-
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print(error)
-                return
+    func loadCompanyData() {
+        viewModel.fetchCompanyData {
+            DispatchQueue.main.async {
+                self.tableView.dataSource = self
+                self.tableView.delegate = self
+                self.tableView.reloadData()
+                self.tableView.rowHeight = 160
             }
-            if let response = response {
-                print(response)
-            }
-            guard let data = data else {
-                return
-            }
-            do {
-               let jsonData = try JSONDecoder().decode([CompanyData].self, from: data)
-                self.data = jsonData
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print(error)
-            }
-
-        }.resume()
+        }
     }
 
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return data.count - 1
+    return viewModel.numberOfRowsInSection(section: section)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let viewData = viewModel.cellForRowAt(indexPath: indexPath)
         if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: FirstCellFromTable.firstCellIdentifier, for: indexPath) as? FirstCellFromTable else {return UITableViewCell()}
-            cell.configForFirstCell(data[indexPath.row], imageArrayForTableView[indexPath.row])
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CompanyProject1.Project1Identifier, for: indexPath) as? CompanyProject1 else {return UITableViewCell()}
+            cell.configForProject1(viewData, imageArrayForTableView[indexPath.row])
             return cell
         } else if indexPath.row == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: SecondCellFromTable.secondCellIdentifier, for: indexPath) as? SecondCellFromTable else {return UITableViewCell()}
-            cell.configForSecondCell(data[indexPath.row], imageArrayForTableView[indexPath.row])
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CompanyProject2.project2Identifier, for: indexPath) as? CompanyProject2 else {return UITableViewCell()}
+            cell.configForProject2(viewData, imageArrayForTableView[indexPath.row])
            return cell
         } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ThirdCellFromTable.thirdCellIdentifier, for: indexPath) as? ThirdCellFromTable else {return UITableViewCell()}
-            cell.data = self.data
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProjectsList.projectsListIdentifier, for: indexPath) as? ProjectsList else {return UITableViewCell()}
+            cell.data = self.viewModel.companyData
             cell.delegate = self
            return cell
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let actionVC = storyboard?.instantiateViewController(withIdentifier: ActionViewController.actionViewControllerIdentifier) as? ActionViewController else {return}
-        actionVC.image = UIImage(named: imageArrayForTableView[indexPath.row])
-        actionVC.name = data[indexPath.row].name
-        actionVC.currentSprint = data[indexPath.row].currentSprint
-        actionVC.startDate = data[indexPath.row].startDate
-        self.present(actionVC, animated: true, completion: nil)
+        guard let presentDetailsVC = storyboard?.instantiateViewController(withIdentifier: PresentDetailsViewController.PresentDetailsIdentifier) as? PresentDetailsViewController else {return}
+        let selectedData = viewModel.didSelectRowAt(indexPath: indexPath)
+         presentDetailsVC.image = UIImage(named: imageArrayForTableView[indexPath.row])
+         presentDetailsVC.presentData = selectedData
+        self.present(presentDetailsVC, animated: true, completion: nil)
     }
-    func collectionImageTapped(_ image: String, _ name: String?, _ currSprint: String?, _ startDate: String?) {
-        guard let actionVC = storyboard?.instantiateViewController(withIdentifier: ActionViewController.actionViewControllerIdentifier) as? ActionViewController else {return}
-        actionVC.image = UIImage(named: image)
-        actionVC.name = name
-        actionVC.currentSprint = currSprint
-        actionVC.startDate = startDate
-        self.present(actionVC, animated: true, completion: nil)
+    func collectionItemsTapped(_ image: String, _ data: CompanyData) {
+        guard let presentDetailsVC = storyboard?.instantiateViewController(withIdentifier: PresentDetailsViewController.PresentDetailsIdentifier) as? PresentDetailsViewController else {return}
+        presentDetailsVC.image = UIImage(named: image)
+        presentDetailsVC.presentData = data
+        self.present(presentDetailsVC, animated: true, completion: nil)
     }
 }
