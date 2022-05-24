@@ -9,8 +9,10 @@ import UIKit
 
 class SampleViewController: UIViewController {
 
+    @IBOutlet weak var sampleLabel: UILabel!
+    var sampleText = "Welcome"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sampleLabel.text = sampleText
     }
 }

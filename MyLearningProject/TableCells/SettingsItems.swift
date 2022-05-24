@@ -10,6 +10,7 @@ import UIKit
 class SettingsItems: UITableViewCell {
     @IBOutlet weak var settingsItemImage: UIImageView!
     @IBOutlet weak var settingsItemLabel: UILabel!
+    static let settingsItemsIdentifier = "settingsItemsIdentifier"
 
     override func awakeFromNib() {
         super.awakeFromNib()

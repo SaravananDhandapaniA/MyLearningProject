@@ -14,9 +14,9 @@ protocol CollectionViewDataDelegate: NSObjectProtocol {
 class ProjectsList: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     static let projectsListIdentifier = "projectsListIdentifier"
+    var viewModel = ProjectsListViewModel()
     var data = [CompanyData]()
     weak var delegate: CollectionViewDataDelegate?
-    let imageArrayForCollectionView = ["Image1", "Image2", "Image3", "Image4"]
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,14 +28,15 @@ class ProjectsList: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
         return data.count
     }
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let viewData = viewModel.cellForItemAt(indexPath: indexPath)
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: CollectionViewCell.collectionIdentifier, for: indexPath) as? CollectionViewCell
-    else {return UICollectionViewCell()}
-        cell.configForCollectionViewCell(imageArrayForCollectionView[indexPath.row], data[indexPath.row])
+            withReuseIdentifier: CollectionViewCell.collectionIdentifier, for: indexPath) as? CollectionViewCell else {return UICollectionViewCell()}
+    cell.configForCollectionViewCell(viewData.imageList[indexPath.row], data[indexPath.row])
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    self.delegate?.collectionItemsTapped(imageArrayForCollectionView[indexPath.row], data[indexPath.row])
+        let selectedData = viewModel.didSelectItemAt(indexPath: indexPath)
+        self.delegate?.collectionItemsTapped(selectedData.imageList[indexPath.row], data[indexPath.row])
     }
 }

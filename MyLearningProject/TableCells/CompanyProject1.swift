@@ -23,12 +23,3 @@ class CompanyProject1: UITableViewCell {
         project1Image.image = UIImage(named: image)
     }
 }
-
-extension UIImageView {
-    func circleImage() {
-        self.clipsToBounds = true
-        self.layer.masksToBounds = true
-        self.layer.cornerRadius = self.frame.size.width / 2
-        self.layer.cornerRadius = self.frame.size.height / 2
-   }
-}

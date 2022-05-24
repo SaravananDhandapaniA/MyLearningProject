@@ -11,9 +11,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
   @IBOutlet weak var tableView: UITableView!
 
-  // var data = [CompanyData]()
     var viewModel = ComapanyDataViewModel()
-  var imageArrayForTableView = ["Image1", "Image2"]
+    var imageArrayForTableView = ["Image1", "Image2"]
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCompanyData()
@@ -29,7 +28,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
 
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
     return viewModel.numberOfRowsInSection(section: section)
     }

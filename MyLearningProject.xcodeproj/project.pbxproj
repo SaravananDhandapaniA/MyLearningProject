@@ -28,6 +28,12 @@
 		5E771D832838BD32009F7090 /* SettingsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E771D822838BD32009F7090 /* SettingsItems.swift */; };
 		5E771D87283B4875009F7090 /* CompanyDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E771D86283B4875009F7090 /* CompanyDataViewModel.swift */; };
 		5E771D8A283B81B1009F7090 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E771D89283B81B1009F7090 /* ApiService.swift */; };
+		5E771D8E283BF5B2009F7090 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E771D8D283BF5B2009F7090 /* SettingsModel.swift */; };
+		5E771D90283C0482009F7090 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E771D8F283C0482009F7090 /* SettingsViewModel.swift */; };
+		5EB4A2EB283CDD070072B9D4 /* ProjectsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4A2EA283CDD070072B9D4 /* ProjectsListViewModel.swift */; };
+		5EB4A2ED283CDFAB0072B9D4 /* ProjectsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4A2EC283CDFAB0072B9D4 /* ProjectsListModel.swift */; };
+		5EB4A2EF283CF02B0072B9D4 /* SettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4A2EE283CF02B0072B9D4 /* SettingsDetailViewController.swift */; };
+		5EB4A2F2283CFF6A0072B9D4 /* ImageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4A2F1283CFF6A0072B9D4 /* ImageUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,12 @@
 		5E771D822838BD32009F7090 /* SettingsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItems.swift; sourceTree = "<group>"; };
 		5E771D86283B4875009F7090 /* CompanyDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataViewModel.swift; sourceTree = "<group>"; };
 		5E771D89283B81B1009F7090 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		5E771D8D283BF5B2009F7090 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		5E771D8F283C0482009F7090 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		5EB4A2EA283CDD070072B9D4 /* ProjectsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewModel.swift; sourceTree = "<group>"; };
+		5EB4A2EC283CDFAB0072B9D4 /* ProjectsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListModel.swift; sourceTree = "<group>"; };
+		5EB4A2EE283CF02B0072B9D4 /* SettingsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailViewController.swift; sourceTree = "<group>"; };
+		5EB4A2F1283CFF6A0072B9D4 /* ImageUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 		5E119127282BA0B9007AB7F4 /* MyLearningProject */ = {
 			isa = PBXGroup;
 			children = (
+				5EB4A2F0283CFE760072B9D4 /* Utilities */,
 				5E91E02E28364DDA006C66ED /* Delegates */,
 				5E771D88283B8183009F7090 /* Services */,
 				5E771D85283B476F009F7090 /* Model */,
@@ -158,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				5E771D86283B4875009F7090 /* CompanyDataViewModel.swift */,
+				5E771D8F283C0482009F7090 /* SettingsViewModel.swift */,
+				5EB4A2EA283CDD070072B9D4 /* ProjectsListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -166,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				5E11915C282BB3BE007AB7F4 /* Model.swift */,
+				5E771D8D283BF5B2009F7090 /* SettingsModel.swift */,
+				5EB4A2EC283CDFAB0072B9D4 /* ProjectsListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,8 +213,9 @@
 			children = (
 				5E11912C282BA0B9007AB7F4 /* MainViewController.swift */,
 				5E119166282C1B3B007AB7F4 /* PresentDetailsViewController.swift */,
-				5E00D38A2837B0F500F91EDE /* SettingsViewController.swift */,
 				5E00D38C2837B16B00F91EDE /* SampleViewController.swift */,
+				5E00D38A2837B0F500F91EDE /* SettingsViewController.swift */,
+				5EB4A2EE283CF02B0072B9D4 /* SettingsDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -209,6 +227,14 @@
 				5E11912A282BA0B9007AB7F4 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		5EB4A2F0283CFE760072B9D4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5EB4A2F1283CFF6A0072B9D4 /* ImageUtility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,15 +390,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB4A2EF283CF02B0072B9D4 /* SettingsDetailViewController.swift in Sources */,
+				5E771D8E283BF5B2009F7090 /* SettingsModel.swift in Sources */,
 				5E00D38D2837B16B00F91EDE /* SampleViewController.swift in Sources */,
 				5E119159282BAF10007AB7F4 /* CompanyProject1.swift in Sources */,
 				5E00D38F2837DB1D00F91EDE /* SettingsProfile.swift in Sources */,
+				5EB4A2ED283CDFAB0072B9D4 /* ProjectsListModel.swift in Sources */,
 				5E11915D282BB3BE007AB7F4 /* Model.swift in Sources */,
 				5E119165282BCFBF007AB7F4 /* CollectionViewCell.swift in Sources */,
 				5E00D38B2837B0F500F91EDE /* SettingsViewController.swift in Sources */,
 				5E771D87283B4875009F7090 /* CompanyDataViewModel.swift in Sources */,
+				5E771D90283C0482009F7090 /* SettingsViewModel.swift in Sources */,
 				5E11912D282BA0B9007AB7F4 /* MainViewController.swift in Sources */,
+				5EB4A2EB283CDD070072B9D4 /* ProjectsListViewModel.swift in Sources */,
 				5E771D832838BD32009F7090 /* SettingsItems.swift in Sources */,
+				5EB4A2F2283CFF6A0072B9D4 /* ImageUtility.swift in Sources */,
 				5E119169282C2EE3007AB7F4 /* ProjectsList.swift in Sources */,
 				5E119129282BA0B9007AB7F4 /* AppDelegate.swift in Sources */,
 				5E771D8A283B81B1009F7090 /* ApiService.swift in Sources */,
